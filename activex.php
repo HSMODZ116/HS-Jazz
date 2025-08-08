@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jazz Offer Activation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; }
+        html, body {
+            margin: 0; padding: 0; overflow: hidden;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a; color: #e2e8f0;
+        }
+        .top-bar {
+            display: flex; justify-content: space-between;
+            background: #1e293b; padding: 14px 20px;
+        }
+        .top-bar a {
+            color: #38bdf8; text-decoration: none; font-weight: bold;
+        }
+        .container {
+            max-width: 400px; margin: 30px auto;
+            padding: 25px; background: #1e293b;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+        }
+        h2 { text-align: center; margin-bottom: 25px; color: #38bdf8; }
+        label { display: block; margin-bottom: 8px; font-size: 14px; }
+        input[type="tel"] {
+            width: 100%; padding: 12px; font-size: 16px;
+            border: 2px solid #334155; background: #0f172a;
+            color: #f8fafc; border-radius: 8px; margin-bottom: 18px;
+        }
+        input[type="submit"] {
+            width: 100%; padding: 12px; font-size: 16px;
+            background: #38bdf8; color: #0f172a;
+            border: none; border-radius: 8px; font-weight: bold;
+            cursor: pointer; transition: background 0.3s;
+        }
+        input[type="submit"]:hover { background: #0ea5e9; }
+        .msg-box, .error-box, .gb-box {
+            margin-top: 20px; padding: 15px; border-radius: 8px;
+        }
+        .msg-box { background: #064e3b; border-left: 5px solid #10b981; }
+        .error-box { background: #7f1d1d; border-left: 5px solid #ef4444; }
+        .gb-box { background: #1e40af; border-left: 5px solid #3b82f6; }
+        input[type="radio"] { margin-right: 8px; }
+        @media (max-width: 480px) {
+            .container { margin: 20px; padding: 20px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-bar">
+    <a href="index.php">← Index</a>
+</div>
+
+<div class="container">
+    <h2> Haseeb Sahil</h2>
+    <form method="post">
+        <label>Enter MSISDN</label>
+        <input type="tel" name="msisdn" maxlength="11" pattern="^03\d{9}$|^923\d{9}$" placeholder="0300XXXXXXX" required>
+
+        <label>Select Offer:</label>
+        <label><input type="radio" name="offer" value="weekly" required >3 DAY 5GB</label>
+        <label><input type="radio" name="offer" value="monthly" > Jazz World 1GB</label>
+
+        <input type="submit" value="Activate Offer">
+    </form>
+
+    
+    
+    </div>
+</body>
+</html>
